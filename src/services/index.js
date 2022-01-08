@@ -41,7 +41,7 @@ const userLogout = async () => {
 };
 
 const userListener = async () => {
-  return await api.get("/jwtid", { withCredentials: true });
+  return await api.get("/jwtid", { withCredentials: false });
 };
 
 export {
