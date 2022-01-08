@@ -24,7 +24,7 @@ const signin = async (email, password) => {
   return await api.post(
     "/user/login",
     { email, password },
-    { withCredentials: false }
+    { withCredentials: true }
   );
 };
 
@@ -37,11 +37,11 @@ const signup = async (pseudo, email, password) => {
 };
 
 const userLogout = async () => {
-  return await api.get("/user/logout", { withCredentials: false });
+  return await api.get("/user/logout", { withCredentials: true });
 };
 
 const userListener = async () => {
-  return await api.get("/jwtid", { withCredentials: "omit" });
+  return await api.get("/jwtid", { withCredentials: true });
 };
 
 export {
