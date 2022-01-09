@@ -54,7 +54,7 @@ export const addPost = (data) => {
         dispatch({ type: GET_POST_ERRORS, payload: "" });
       }
     } catch (err) {
-      console.log(err.errors);
+      console.log(err);
     }
   };
 };
