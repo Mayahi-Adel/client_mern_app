@@ -43,7 +43,6 @@ const userLogout = async () => {
 const userListener = async () => {
   return await api.get("/jwtid", {
     withCredentials: true,
-    headers: { "X-Requested-With": "XMLHttpRequest" },
   });
 };
 
