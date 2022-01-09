@@ -12,21 +12,23 @@ function Trending() {
   const trendList = useSelector((state) => state.trends);
 
   return (
-    <div className="trending-page">
-      <LeftNav active="trending" />
-      <div className="main">
-        <ul>
-          {!isEmpty(trendList[0]) &&
-            trendList.map((post) => <Card post={post} key={post._id} />)}
-        </ul>
-      </div>
-      <div className="right-side">
-        <div className="right-side-container">
-          <Trends />
-          {uid && <FriendsHint />}
+    <>
+      <div className="trending-page">
+        <LeftNav active="trending" />
+        <div className="main">
+          <ul>
+            {!isEmpty(trendList[0]) &&
+              trendList.map((post) => <Card post={post} key={post._id} />)}
+          </ul>
+        </div>
+        <div className="right-side">
+          <div className="right-side-container">
+            <Trends />
+            {uid && <FriendsHint />}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
